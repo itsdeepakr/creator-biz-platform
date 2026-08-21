@@ -1,0 +1,39 @@
+{
+  "name": "creator-biz-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Creator-Business Collaboration Platform connecting content creators with businesses for sponsored content",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:admin\" \"npm run dev:creator\" \"npm run dev:business\"",
+    "dev:backend": "npm run dev --workspace=@cbp/backend",
+    "dev:admin": "npm run dev --workspace=@cbp/admin",
+    "dev:creator": "npm run dev --workspace=@cbp/creator-app",
+    "dev:business": "npm run dev --workspace=@cbp/business-app",
+    "build": "npm run build --workspaces",
+    "db:generate": "npm run generate --workspace=@cbp/prisma",
+    "db:push": "npm run push --workspace=@cbp/prisma",
+    "db:migrate": "npm run migrate --workspace=@cbp/prisma",
+    "db:seed": "npm run seed --workspace=@cbp/prisma",
+    "db:studio": "npm run studio --workspace=@cbp/prisma",
+    "lint": "eslint --ext .ts,.tsx apps/ packages/",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "type-check": "tsc --noEmit --project apps/backend/tsconfig.json && tsc --noEmit --project apps/admin/tsconfig.json",
+    "test:e2e": "node --experimental-strip-types tests/e2e/runner.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "packageManager": "npm@10.5.0"
+}
