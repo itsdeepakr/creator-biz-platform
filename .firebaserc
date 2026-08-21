@@ -1,0 +1,20 @@
+{
+  "projects": {
+    "default": "cbp-india-platform"
+  },
+  "targets": {
+    "cbp-india-platform": {
+      "hosting": {
+        "admin": [
+          "cbp-admin-portal"
+        ],
+        "creator": [
+          "cbp-creator-app"
+        ],
+        "business": [
+          "cbp-business-app"
+        ]
+      }
+    }
+  }
+}
