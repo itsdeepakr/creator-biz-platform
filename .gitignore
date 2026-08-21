@@ -62,6 +62,7 @@ user_journey_recording/
 .agents/
 
 # Packages and local envs
+.firebase/
 packages/prisma/.env
 apps/backend/.env
 apps/admin/.env
