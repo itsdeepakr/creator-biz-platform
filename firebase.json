@@ -3,16 +3,12 @@
     {
       "target": "admin",
       "public": "apps/admin/out",
+      "cleanUrls": true,
+      "trailingSlash": true,
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
       ]
     },
     {
