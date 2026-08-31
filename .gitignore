@@ -58,6 +58,9 @@ apps/business-app/.dart_tool/
 # Demo & Agent Recordings
 demo_recording/
 user_journey_recording/
+master_walkthrough_recording/
+test_*.png
+test_*.mp3
 *.mp4
 .agents/
 

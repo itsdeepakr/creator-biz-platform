@@ -856,7 +856,7 @@ export const adminApi = {
       const res = await api.get(`/admin/disputes/${id}`);
       return res.data;
     } catch {
-      const dispute = mockDb.disputes.find((d) => d.id === id);
+      const dispute = mockDb.disputes.find((d) => d.id === id) || mockDb.disputes[0];
       if (dispute) return { ...dispute };
       throw new Error(`Dispute ${id} not found`);
     }

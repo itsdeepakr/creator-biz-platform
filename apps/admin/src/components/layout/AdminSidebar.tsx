@@ -21,6 +21,12 @@ import { useAuth } from '@/lib/auth-context';
 
 const navItems = [
   {
+    name: 'User Journey Story',
+    href: '/showcase',
+    icon: Sparkles,
+    badge: 'LIVE',
+  },
+  {
     name: 'Dashboard',
     href: '/dashboard',
     icon: LayoutDashboard,
