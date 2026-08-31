@@ -59,8 +59,10 @@ apps/business-app/.dart_tool/
 demo_recording/
 user_journey_recording/
 master_walkthrough_recording/
+production_walkthrough_recording/
 test_*.png
 test_*.mp3
+test_*.jpg
 *.mp4
 .agents/
 
